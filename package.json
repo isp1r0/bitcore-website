@@ -14,7 +14,9 @@
   "scripts": {
     "test": "gulp",
     "start": "node index.js",
-    "install": "gulp"
+    "install": "gulp",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": "^0.12.11"
@@ -51,6 +53,8 @@
     "mkdirp": "^0.5.1",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.5",
-    "uglify-js": "^2.6.1"
-  }
+    "uglify-js": "^2.6.1",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
