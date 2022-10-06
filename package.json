@@ -14,7 +14,9 @@
   "scripts": {
     "test": "gulp",
     "start": "node index.js",
-    "install": "gulp"
+    "install": "gulp",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "engines": {
     "node": "^0.12.11"
@@ -27,10 +29,10 @@
     "express": "^4.13.3",
     "express-error-handler": "^1.0.1",
     "globby": "^4.0.0",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-cached": "^1.1.0",
-    "gulp-csso": "^1.0.1",
+    "gulp-csso": "^3.0.0",
     "gulp-if": "^2.0.0",
     "gulp-jade": "^1.1.0",
     "gulp-jscs": "^3.0.2",
@@ -39,8 +41,8 @@
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
-    "gulp-rev-all": "^0.8.22",
-    "gulp-sass": "^2.1.0",
+    "gulp-rev-all": "^3.0.0",
+    "gulp-sass": "^5.0.0",
     "gulp-sass-lint": "^1.1.0",
     "gulp-shell": "^0.5.1",
     "gulp-size": "^2.0.0",
@@ -51,6 +53,8 @@
     "mkdirp": "^0.5.1",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.5",
-    "uglify-js": "^2.6.1"
-  }
+    "uglify-js": "^3.14.3",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
